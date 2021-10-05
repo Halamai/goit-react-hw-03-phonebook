@@ -1,0 +1,15 @@
+.namelist {
+  display: block;
+  margin: 10px;
+  background-color: aqua;
+}
+.nameinput {
+  margin: 10px;
+}
+.btncon:focus,
+.btncon:hover {
+  background-color: rgb(18, 219, 18);
+}
+.btncon {
+  border-radius: 5px;
+}

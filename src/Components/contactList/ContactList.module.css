@@ -1,0 +1,17 @@
+.btn:hover,
+.btn:focus {
+  background-color: rgb(204, 9, 9);
+}
+.btn {
+  margin-left: 15px;
+  border-radius: 5px;
+}
+
+.menu {
+  align-items: center;
+  background-color: bisque;
+}
+.list {
+  padding: 10px;
+  margin: 10px;
+}
