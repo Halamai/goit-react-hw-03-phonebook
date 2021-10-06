@@ -5,7 +5,6 @@ import axios from "axios";
 
 class ContactForm extends Component {
   state = {
-    // contacts: [],
     name: "",
     number: "",
   };

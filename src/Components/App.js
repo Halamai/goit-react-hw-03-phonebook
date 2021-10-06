@@ -12,17 +12,19 @@ class App extends Component {
     filter: "",
   };
 
+  componentDidMount() {
+    const contacts = JSON.parse(localStorage.getItem("contacts"));
+    console.log(contacts);
+    if (contacts) {
+      this.setState({ contacts });
+    }
+  }
+
   componentDidUpdate(prevProps, prevState) {
     if (prevState.contacts !== this.state.contacts) {
       localStorage.setItem("contacts", JSON.stringify(this.state.contacts));
     }
   }
-  componentDidMount = () => {
-    const savedState = localStorage.getItem("contacts");
-    const parsedState = JSON.parse(savedState);
-    return parsedState;
-  };
-
   // componentDidMount = () => {
   //   axios
   //     .get("https://reactdz3-default-rtdb.firebaseio.com/contacts.json")
@@ -48,7 +50,7 @@ class App extends Component {
   onHandleFilter = (e) => {
     this.setState({ filter: e.target.value });
   };
-  // console.log(e);
+
   isContactExist = (name) =>
     this.state.contacts.some(
       (contact) => contact.name.toLowerCase() === name.toLowerCase()
